@@ -26,12 +26,7 @@ body {
   background-color: var(--outer-space);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.625rem;
   color: var(--heliotrope);
   font-weight: 700;
@@ -99,7 +94,9 @@ footer {
 
 /* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
 .row {
-  display: flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  
   /* TODO: */
 }
 
@@ -109,6 +106,12 @@ footer {
 
 /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
 .card-column {
+
+  flex: 0 0 30%;
+  border: 2px dashed white;
+  margin: 10px;
+  width: 30%;
+
   /* flex:  TODO:;
   padding:  TODO:; */
   /* when the screen resizes, make it so our columns don't jump in size    */
@@ -123,33 +126,38 @@ footer {
   padding: 2rem;
   color: var(--heliotrope);
 
+
   /* outline is like border, but on the outside of the box instead of inside */
   /* outline: x x x; */
   outline-offset: -2px;
   transition: all 0.5s ease-in-out;
 }
 
-.code-card .card-header {
+ .code-card .card-header {
   /* TODO: use position and negative margins to move title of card over the card's outline and create an overlap effect */
   /* position: ;
   margin: ;
   padding: 
   TODO: colors, border*/
+
+  position: relative;
+  border: solid white 2px;
+  background-color: var(--outer-space);
+  border-radius: 8px;
+  margin-top: -3rem;
   transition: all 0.5s ease-in-out;
+  padding: 10px;
 }
 
 /* TODO: set an outer and inner drop shadow on the card to create a glowing effect on hover */
 
 /* each card's code block grows to the height of the largest code block on the page, making each card even in height */
 .code-card .code-block {
+  color: white;
+  border-radius: 1rem;
+  background-image: linear-gradient(var(--heliotrope) 0%,var(--bright-turquoise) 100%);
+  padding: 1rem;
   /* TODO: */
-}
-
-.code-card pre {
-  /* TODO: set styles to make it so code wraps in <pre> instead of overflowing */
-
-  /* TODO: use linear-gradient() function to create a fading background  */
-  /*  https://www.w3schools.com/cssref/func_linear-gradient.php*/
 }
 
 /* on <pre> click, select all contents so the code is highlighted */
@@ -158,9 +166,10 @@ footer {
 }
 
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
   .card-column {
+    flex: 0 0 45%;
     /* TODO: */
   }
 
@@ -173,10 +182,12 @@ footer {
 /* media query for larger screens */
 @media screen and (min-width: 992px) {
   header {
-    width: 75%;
+    width: 30%;
+    flex: 0 0 30%;
   }
 
   .card-column {
+
     /* TODO: */
   }
 }

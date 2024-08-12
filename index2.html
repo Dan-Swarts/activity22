@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/style2.css">
+        <title>My version</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>CSS Snippet Cheatsheet</h1>
+            <p>
+                Ever have trouble recalling the exact syntax for your favorite CSS code? 
+                Give it a permanent home and add it to this page! select any snippet below 
+                and it'll automatically select all of the code for you to copy. 
+            </p>
+        </header>
+
+        <main>
+            <section class="code-card" id="card-flexbox-row">
+                <header class="card-header"><h2>Flexbox Row</h2></header>
+                <p>Use these properties to create a Flexbox row layout</p>
+                <figure class="card-body">
+                    <code>
+                        .row {<br>
+                        &nbsp;&nbsp;isplay: flex;<br>
+                        &nbsp;&nbsp;flex-direction: row;<br>
+                        &nbsp;&nbsp;flex-wrap: wrap;<br>
+                        &nbsp;&nbsp;justify-content: center;<br>
+                        }
+                    </code>
+                </figure>
+                <figure class="demo-flex" id="demo-flexbox-row">
+                    <p>item1</p>
+                    <p>item2</p>
+                    <p>item3</p>
+                </figure>
+            </section>
+
+            <section class="code-card" id="card-flexbox-column">
+                <header class="card-header"><h2>Flexbox Column</h2></header>
+                <p>Use these properties to create a Flexbox row layout</p>
+                <figure class="card-body">
+                    <code>
+                        .column {<br>
+                        &nbsp;&nbsp;display: flex;<br>
+                        &nbsp;&nbsp;flex-direction: column<br>
+                        }
+                    </code>
+                </figure>
+
+                <figure class="demo-flex" id="demo-flexbox-column">
+                    <p>item1</p>
+                    <p>item2</p>
+                    <p>item3</p>
+                </figure>
+            </section>
+
+            <section class="code-card" id="card-grid">
+                <header class="card-header"><h2>Flexbox CSS Grid Layout</h2></header>
+                <p>Use these properties to create a Flexbox row layout</p>
+                <figure class="card-body">
+                    <code>
+                        .grid {<br>
+                        &nbsp;&nbsp;display: grid;<br>
+                        &nbsp;&nbsp;width: 100%;<br>
+                        &nbsp;&nbsp;grid-template-columns: repeat(3,33%); <br>
+                        &nbsp;&nbsp;grid-template-rows: repeat(3,33%);<br>
+                        }
+                    </code>
+                </figure>
+
+                <figure class="demo" id="demo-grid">
+                    <ul class="grid">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </figure>
+            </section>
+
+            <section class="code-card" id="card-gradients">
+                <header class="card-header"><h2>Linear Gradients</h2></header>
+                <p>Use these properties to create a Flexbox row layout</p>
+                <figure class="card-body">
+                    <code>
+                        .linear-gradient-background {<br>
+                        &nbsp;&nbsp;background-image: linear-gradient(<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;rgba(232, 102, 236, 0.3) 0%,<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;rgba(232, 102, 236, 0.6) 100%<br>
+                        &nbsp;&nbsp;); <br>
+                        }
+                    </code>
+                </figure>
+                <figure class="demo" id="demo-gradients">
+                    <div id="linear-gradient-background"></div>
+                </figure>
+            </section>
+
+            <section class="code-card" id="card-transition">
+                <header class="card-header"><h2>Box Transition Glow</h2></header>
+                <p>Use these properties to create a Flexbox row layout</p>
+                <figure class="card-body">
+                    <code>
+                        .code-card .card-header {<br>
+                        &nbsp;&nbsp;border-radius: 8px;<br>
+                        &nbsp;&nbsp;transition: all 0.5s ease-in-out;<br>
+                        }<br>
+                        .code-card:hover, .code-card:hover .card-header {<br>
+                        &nbsp;&nbsp;box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);<br>
+                        }
+                    </code>
+                </figure>
+                
+                <figure class="demo" id="demo-transition">
+                    <div id="transition-object"></div>
+                </figure>
+            </section>
+
+            <section class="code-card" id="card-overlay">
+                <header class="card-header"><h2>Overlay Card with Title</h2></header>
+                <p>Use these properties to create a Flexbox row layout</p>
+                <figure class="card-body">
+                    <code>
+                        .card-header { <br>
+                        &nbsp;&nbsp;position: relative; <br>
+                        &nbsp;&nbsp;margin-top: -20px; <br>
+                        }
+                    </code>
+                </figure>
+
+                <figure class="demo" id="demo-overlay">
+                    <div id="overlay-object">
+                        ANNOYING OVERLAY
+                    </div>
+                </figure>
+            </section>
+        </main>
+
+        <footer>
+            <h2>Made with ❤️ and CSS</h2>
+        </footer>
+    </body>
+</html>
